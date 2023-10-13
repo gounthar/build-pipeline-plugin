@@ -315,12 +315,6 @@
                     <releaseProfiles>web-tests</releaseProfiles>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.0</version>
-                <!--$NO-MVN-MAN-VER$ -->
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
@@ -9,7 +10,10 @@
     <version>1.5.9-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Build Pipeline Plugin</name>
-    <description>This plugin provides build pipeline functionality to Hudson and Jenkins. This allows a chain of jobs to be visualised in a new view.  Manual jobs in the pipeline can be triggered by a user with the appropriate permissions manually confirming.</description>
+    <description>This plugin provides build pipeline functionality to Hudson and Jenkins. This allows a chain of jobs to
+        be visualised in a new view. Manual jobs in the pipeline can be triggered by a user with the appropriate
+        permissions manually confirming.
+    </description>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin</url>
     <licenses>
         <license>
@@ -24,6 +28,7 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
+        <jenkins.version>2.361.4</jenkins.version>
         <code.coverage.percentage>50</code.coverage.percentage>
         <checkstyle.rules.file>checkstyle_rules.xml</checkstyle.rules.file>
         <pmd.config.file>pmd_rules.xml</pmd.config.file>
@@ -46,6 +51,13 @@
         </developer>
     </developers>
     <dependencies>
+        <dependency>
+            <groupId>io.jenkins.tools.bom</groupId>
+            <artifactId>bom-2.361.x</artifactId>
+            <version>2102.v854b_fec19c92</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -361,7 +373,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <execute />
+                                        <execute/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
@@ -400,8 +412,8 @@
             <url>https://repo.jenkins-ci.org/releases</url>
         </repository>
         <snapshotRepository>
-             <id>maven.jenkins-ci.org</id>
-	     <url>https://repo.jenkins-ci.org/snapshots</url>
+            <id>maven.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -33,7 +33,7 @@
         <checkstyle.rules.file>checkstyle_rules.xml</checkstyle.rules.file>
         <pmd.config.file>pmd_rules.xml</pmd.config.file>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <groovy.version>1.8.6</groovy.version>
+        <groovy.version>3.0.19</groovy.version>
         <selenium.version>2.48.0</selenium.version>
         <exclude.tests>**/functionaltest/*.java</exclude.tests>
     </properties>
@@ -85,7 +85,6 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>${groovy.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -161,7 +160,7 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>1.8.3</version>
+            <version>1.9.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -198,12 +197,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.4</version>
-                <!--$NO-MVN-MAN-VER$ -->
+                <version>3.11.0</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
+                <version>3.6.0</version>
                 <configuration>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
@@ -211,7 +210,7 @@
             <plugin>
                 <groupId>org.codehaus.gmaven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
-                <version>1.4</version>
+                <version>1.5</version>
                 <!--$NO-MVN-MAN-VER$ -->
                 <configuration>
                     <providerSelection>1.8</providerSelection>
@@ -219,8 +218,8 @@
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.gmaven.runtime</groupId>
-                        <artifactId>gmaven-runtime-1.8</artifactId>
-                        <version>1.4</version>
+                        <artifactId>gmaven-runtime-2.0</artifactId>
+                        <version>1.5</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>org.codehaus.groovy</groupId>
@@ -229,10 +228,12 @@
                         </exclusions>
                     </dependency>
                     <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
+                        <groupId>org.apache.groovy</groupId>
                         <artifactId>groovy-all</artifactId>
-                        <version>${groovy.version}</version>
+                        <version>4.0.15</version>
+                        <type>pom</type>
                     </dependency>
+
                 </dependencies>
                 <executions>
                     <execution>
